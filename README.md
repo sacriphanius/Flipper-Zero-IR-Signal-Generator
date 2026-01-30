@@ -9,7 +9,6 @@ A professional-grade Infrared Signal Generator for Flipper Zero with an advanced
 ### English
 - **🚀 Advanced UI:** Sleek, rounded design with a professional header and compact footer.
 - **📈 Spectrum Visualization:** Real-time RF-style line spectrum with noise and carrier peak simulation.
-- **✨ Animated Splash:** Custom opening animation featuring "by Sacriphanius".
 - **🔌 External IR Support:** Automatic detection of external IR modules via GPIO.
 - **⚡ OTG Power:** Automatically enables 5V power for external hardware.
 - **🌈 Dynamic LED:** Frequency-reactive LED blinking (Red/Green/Blue/Purple).
@@ -18,7 +17,6 @@ A professional-grade Infrared Signal Generator for Flipper Zero with an advanced
 ### Türkçe
 - **🚀 Gelişmiş Arayüz:** Profesyonel başlık ve kompakt alt bilgi ile şık, oval tasarım.
 - **📈 Spektrum Görselleştirme:** Gürültü ve taşıyıcı tepe noktası simülasyonlu gerçek zamanlı RF tarzı spektrum.
-- **✨ Animasyonlu Splash:** "by Sacriphanius" imzalı özel açılış animasyonu.
 - **🔌 Harici IR Desteği:** GPIO üzerinden harici IR modüllerinin otomatik algılanması.
 - **⚡ OTG Güç:** Harici donanım için otomatik 5V güç çıkışı.
 - **🌈 Dinamik LED:** Frekansa duyarlı LED yanıp sönme (Kırmızı/Yeşil/Mavi/Mor).
