@@ -108,7 +108,7 @@ static void app_draw_callback(Canvas* canvas, void* ctx) {
         if (app_state.rx_frequency == 0) {
             canvas_draw_str_aligned(canvas, 64, 40, AlignCenter, AlignCenter, "Unknown");
         } else if (app_state.rx_frequency == -1) {
-            canvas_draw_str_aligned(canvas, 64, 40, AlignCenter, AlignCenter, "Waiting...");
+            canvas_draw_str_aligned(canvas, 64, 40, AlignCenter, AlignCenter, "Waiting for signal...");
         } else {
             char freq_buf[20];
             snprintf(freq_buf, sizeof(freq_buf), "%lu kHz", app_state.rx_frequency / 1000);
@@ -193,7 +193,7 @@ static void app_draw_callback(Canvas* canvas, void* ctx) {
         
         draw_rounded_box(canvas, 104, btn_y, 24, btn_h, "");
         canvas_set_color(canvas, ColorWhite);
-        canvas_draw_str_aligned(canvas, 116, 59, AlignCenter, AlignCenter, "RX ->");
+        canvas_draw_str_aligned(canvas, 116, 59, AlignCenter, AlignCenter, "RX ^");
         canvas_set_color(canvas, ColorBlack);
     }
 
@@ -302,8 +302,8 @@ int32_t ir_signal_generator_app(void* p) {
                     }
                 } else if (event.type == InputTypeLong) {
                     switch(event.key) {
-                        case InputKeyLeft:
-                        case InputKeyRight:
+                        case InputKeyUp:
+                        case InputKeyDown:
                             app_state.show_rx_screen = false;
                             infrared_worker_rx_stop(worker);
                             is_rx_started = false;
@@ -362,7 +362,7 @@ int32_t ir_signal_generator_app(void* p) {
                     }
                 } else if (event.type == InputTypeLong) {
                     switch(event.key) {
-                        case InputKeyRight:
+                        case InputKeyUp:
                             app_state.show_rx_screen = true;
                             infrared_worker_rx_enable_signal_decoding(worker, true);
                             infrared_worker_rx_enable_blink_on_receiving(worker, true);
