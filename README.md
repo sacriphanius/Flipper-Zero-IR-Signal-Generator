@@ -1,52 +1,35 @@
-#  IR Signal Generator for Flipper Zero
+# IR Signal Generator & Analyzer
 
-![Preview](preview.png)
+A powerful, visually refined Infrared Signal Generator and Analyzer application for the Flipper Zero. Designed with a high-tech aesthetic and smooth animations.
 
-A professional-grade Infrared Signal Generator for Flipper Zero with an advanced dashboard, real-time spectrum visualization, and automatic external module support.
+<p align="center">
+  <img src="preview_1.png" width="45%" />
+  <img src="preview_2.png" width="45%" />
+</p>
 
-##  Features / Özellikler
+## ✨ Features
 
-### English
-- **Advanced UI:** Sleek, rounded design with a professional header and compact footer.
-- **📈 Spectrum Visualization:** Real-time RF-style line spectrum with noise and carrier peak simulation.
-- **🔌External IR Support:** Automatic detection of external IR modules via GPIO.
-- **⚡ OTG Power:** Automatically enables 5V power for external hardware.
-- ** Dynamic LED:** Frequency-reactive LED blinking (Red/Green/Blue/Purple).
-- **🕹️ Live Adjust:** Change frequency on-the-fly without stopping the signal.
+### 📡 Signal Generator (TX)
+*   **Variable Frequency:** Generates IR signals with precise frequency control from **30kHz to 60kHz**.
+*   **Dynamic Animation:** Features a "Crazy Mode" spectrum animation that reacts violently during transmission, visualizing the signal output.
+*   **External Module Support:** Automatically detects and switches to 5V external IR modules (pin PA7) for high-power transmission.
+*   **Smart LED Feedback:** RGB LED indicates frequency range (Red: <35k, Green: <42k, Blue: <50k).
 
-### Türkçe
-- **Gelişmiş Arayüz:** Profesyonel başlık ve kompakt alt bilgi ile şık, oval tasarım.
-- **📈 Spektrum Görselleştirme:** Gürültü ve taşıyıcı tepe noktası simülasyonlu gerçek zamanlı RF tarzı spektrum.
-- ** Harici IR Desteği:** GPIO üzerinden harici IR modüllerinin otomatik algılanması.
-- **⚡ OTG Güç:** Harici donanım için otomatik 5V güç çıkışı.
-- **Dinamik LED:** Frekansa duyarlı LED yanıp sönme (Kırmızı/Yeşil/Mavi/Mor).
-- **🕹️ Canlı Ayar:** Sinyali durdurmadan anlık frekans değişimi.
+### 🔍 Signal Searcher (RX)
+*   **Spectrum Analyzer:** A smooth, sine-wave based spectrum animation scans for signals ("Calm Mode") and reacts dyamically when a signal is detected ("Excited Mode").
+*   **Frequency Detection:** Decodes incoming IR signals and displays the detected protocol frequency in real-time.
+*   **Auto-Sync:** Automatically captures the detected RX frequency and applies it to the Generator, allowing for immediate re-transmission.
 
----
+## 🎮 Controls
 
-## 🎮 Controls / Kontroller
+| Button | Action |
+| :--- | :--- |
+| **Left / Right** | Decrease / Increase Frequency (1kHz steps) |
+| **OK** | Start / Stop Transmission (TX Mode) |
+| **Long Press UP** | Switch to **Signal Searcher (RX)** Mode |
+| **UP** | Return to **Generator (TX)** Mode |
+| **Back** | Exit Application |
 
-| Button / Tuş | Action (EN) | İşlem (TR) |
-| :--- | :--- | :--- |
-| **OK** | Toggle Signal (TX/STOP) | Sinyali Başlat/Durdur |
-| **Left / Right** | Adjust Frequency | Frekansı Ayarla |
-| **Back** | Quit Application | Uygulamadan Çık |
-
----
-
-## 🛠️ Installation / Kurulum
-
-1. Clone or copy this folder to `applications_user/` in your firmware.
-2. Run the following command from the firmware root:
-
-```bash
-./fbt fap_ir_signal_generator
-```
-
----
-
-## 👨‍💻 Author
-Developed by **Sacriphanius**
-
-## ⚖️ License
-This project is licensed under the [MIT License](LICENSE).
+## 🎨 Visuals
+*   **High-Tech UI:** Custom frames, bottom status bands, and clean typography.
+*   **Reactive Animations:** The interface feels alive with wave animations that respond to the device's state (Idle, Scanning, Transmitting, Receiving).
